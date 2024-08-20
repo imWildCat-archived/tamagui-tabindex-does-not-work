@@ -10,6 +10,7 @@ import {
   SwitchRouterButton,
   XStack,
   YStack,
+  Text
 } from '@my/ui'
 import { ChevronDown, ChevronUp, X } from '@tamagui/lucide-icons'
 import { useState } from 'react'
@@ -42,6 +43,17 @@ export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
       </XStack>
 
       <YStack gap="$4">
+        <Button tabIndex={0}>
+          
+          <Text>
+            tab Index does not work on iOS for a11y
+  </Text></Button>
+
+  <Button accessible={true}>
+          
+          <Text>
+          accessible (deprecated) works!
+  </Text></Button>
         <H1 ta="center" col="$color12">
           Welcome to Tamagui.
         </H1>
